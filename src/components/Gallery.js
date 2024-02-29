@@ -1,5 +1,6 @@
 import "./Gallery.css";
 import Pictures from "./Pictures";
+import Speech from "./Speech";
 import React, { useState, useEffect } from "react";
 
 const Gallery = () => {
@@ -13,7 +14,6 @@ const Gallery = () => {
       const response = await fetch(url);
       const responseJson = await response.json();
       const result = responseJson.results;
-      console.log(result);
       setRes(result);
     };
   
@@ -43,6 +43,7 @@ const Gallery = () => {
             <div className="frame">
               <Pictures res={res} currentIndex={currentIndex} btnNext={btnNext}/>
             </div>
+              <Speech btnPrev={btnPrev} btnNext={btnNext}/>
             <div className="switch" title="스위치" onClick={() => {isClicked()}}></div>
           </div>
         </div>

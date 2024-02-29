@@ -1,0 +1,9 @@
+@charset "utf-8";
+.speech{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: rotateY(180deg);
+}
