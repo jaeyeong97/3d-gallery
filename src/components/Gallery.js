@@ -1,39 +1,38 @@
 import "./Gallery.css";
 import Pictures from "./Pictures";
-import Speech from "./Speech";
 import React, { useState, useEffect } from "react";
 
 const Gallery = () => {
-    const [switchToggle, setSwitchToggle] = useState(true);
-    const [res, setRes] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const Access_Key = "d57SqERduFLBmdqXYCfqj_ULjf3DZLdbKDeelDSLtsI";
-    const url = `https://api.unsplash.com/search/photos?page=1&query=modern art&client_id=${Access_Key}&orientation=landscape&per_page=40`;
-  
-    const fetchRequest = async () => {
-      const response = await fetch(url);
-      const responseJson = await response.json();
-      const result = responseJson.results;
-      setRes(result);
-    };
-  
-    useEffect(() => {
-      fetchRequest();
-    }, []);
-  
-    const btnPrev = () => {
-      const nextIndex = (currentIndex + 1) % res.length; //인덱스 값 초과시 0으로 돌아가게
-      setCurrentIndex(nextIndex);
-    };
-    const btnNext = () => {
-      const prevIndex = currentIndex === 0 ? res.length - 1 : currentIndex - 1; //인덱스 값 0 미만으로 안되게
-      setCurrentIndex(prevIndex);
-    };
+  const [switchToggle, setSwitchToggle] = useState(true);
+  const [res, setRes] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const Access_Key = "d57SqERduFLBmdqXYCfqj_ULjf3DZLdbKDeelDSLtsI";
+  const url = `https://api.unsplash.com/search/photos?page=1&query=modern art&client_id=${Access_Key}&orientation=landscape&per_page=40`;
 
-    //스위치 토글
-    const isClicked = () => {
-        setSwitchToggle(!switchToggle);
-    };
+  const fetchRequest = async () => {
+    const response = await fetch(url);
+    const responseJson = await response.json();
+    const result = responseJson.results;
+    setRes(result);
+  };
+
+  useEffect(() => {
+    fetchRequest();
+  }, []);
+
+  const btnPrev = () => {
+    const nextIndex = (currentIndex + 1) % res.length; //인덱스 값 초과시 0으로 돌아가게
+    setCurrentIndex(nextIndex);
+  };
+  const btnNext = () => {
+    const prevIndex = currentIndex === 0 ? res.length - 1 : currentIndex - 1; //인덱스 값 0 미만으로 안되게
+    setCurrentIndex(prevIndex);
+  };
+
+  //스위치 토글
+  const isClicked = () => {
+    setSwitchToggle(!switchToggle);
+  };
 
   return (
     <div className="scene">
@@ -41,10 +40,9 @@ const Gallery = () => {
         <div className="cube_face cube_face_back">
           <div className="frame_wrap" >
             <div className="frame">
-              <Pictures res={res} currentIndex={currentIndex} btnNext={btnNext}/>
+              <Pictures res={res} currentIndex={currentIndex} btnNext={btnNext} />
             </div>
-              <Speech btnPrev={btnPrev} btnNext={btnNext}/>
-            <div className="switch" title="스위치" onClick={() => {isClicked()}}></div>
+            <div className="switch" title="스위치" onClick={() => { isClicked() }}></div>
           </div>
         </div>
         <div className="cube_face cube_face_right">
