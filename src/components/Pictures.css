@@ -1,17 +1,18 @@
 @charset "utf-8";
 .pictures .imgContainer {
   position: relative;
-  width: 250px;
-  height: 296px;
+  width: 793px;
+  height: 400px;
   background-image: url(../img/frame.png);
   background-size: 100% 100%;
+  box-shadow: -5px 5px 10px #222;
 }
 .pictures .imgContainer img {
   display: block;
   position: absolute;
-  top: 31px;
-  left: 32px;
-  width: 186px;
-  height: 233px;
+  top: 19px;
+  right: 26px;
+  width: 741px;
+  height: 360px;
   object-fit: cover;
 }
