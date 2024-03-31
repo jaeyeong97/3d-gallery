@@ -59,7 +59,30 @@ const Gallery = () => {
             <div className="exit_sign"></div>
           </div>
         </div>
-        <div className="cube_face cube_face_left"></div>
+        <div className="cube_face cube_face_left">
+          <div className="window_wrap">
+            <div className="w_top"></div>
+            <div className="w_bottom"></div>
+            <div className="w_right"></div>
+            <div className="w_front">
+              <div className="w_frame1"></div>
+              <div className="w_frame2"></div>
+              <div className="rain rain1"></div>
+              <div className="rain rain2"></div>
+              <div className="rain rain3"></div>
+              <div className="rain rain4"></div>
+              <div className="rain rain5"></div>
+              <div className="rain rain6"></div>
+              <div className="rain rain7"></div>
+              <div className="rain rain8"></div>
+              <div className="rain rain9"></div>
+              <div className="rain rain10"></div>
+              <div className="rain rain11"></div>
+              <div className="rain rain12"></div>
+              <div className="rain rain13"></div>
+            </div>
+          </div>
+        </div>
         <div className="cube_face cube_face_top">
           <div className="light">
             <div className="stick"></div>
