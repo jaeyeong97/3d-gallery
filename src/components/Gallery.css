@@ -35,6 +35,35 @@
     opacity: 1;
   }
 }
+@keyframes lighting {
+  0% {
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e);
+  }
+  1% {
+    background: linear-gradient(to top, #2d2800, #c0c001);
+  }
+  2% {
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e);
+  }
+  54% {
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e);
+  }
+  55% {
+    background: linear-gradient(to top, #000000, #b4b400);
+  }
+  56% {
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e);
+  }
+  57% {
+    background: radial-gradient(circle at top left, #bcbc01, #3e3a0e);
+  }
+  58% {
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e);
+  }
+  100% {
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -240,7 +269,7 @@
   height: 25px;
   box-sizing: border-box;
   z-index: 10;
-  background-color: #8f8f8f;
+  background: linear-gradient(to right, #7d7d7d, #939e9f);
 }
 .cube_face_left .window_wrap .w_top::after {
   content: "";
@@ -252,7 +281,7 @@
   height: 84px;
   transform: rotate(-74deg);
   z-index: 100;
-  background-color: #7d7d7d;
+  background-color: #5d5c5cb7;
 }
 .cube_face_left .window_wrap .w_bottom {
   position: absolute;
@@ -262,7 +291,7 @@
   height: 10px;
   box-sizing: border-box;
   z-index: 100;
-  background-color: #8f8f8f;
+  background: linear-gradient(to right, #7d7d7d, #939e9f);
 }
 .cube_face_left .window_wrap .w_bottom::after {
   content: "";
@@ -274,7 +303,7 @@
   height: 83px;
   transform: rotate(86deg);
   z-index: 100;
-  background-color: #7d7d7d;
+  background-color: #5d5c5cb7;
 }
 .cube_face_left .window_wrap .w_right {
   position: absolute;
@@ -283,7 +312,7 @@
   width: 80px;
   height: 100%;
   box-sizing: border-box;
-  background-color: #999999;
+  background: linear-gradient(to right, #7d7d7d, #787c7c);
 }
 .cube_face_left .window_wrap .w_front {
   position: absolute;
@@ -295,7 +324,8 @@
   border: 8px solid #657a8de3;
   border-right: none;
   box-sizing: border-box;
-  background-color: #2e3b48;
+  background-color: #353529;
+  animation: lighting 10s infinite;
 }
 .cube_face_left .window_wrap .w_front::after {
   content: "";
@@ -305,7 +335,7 @@
   position: absolute;
   top: 0;
   left: 70%;
-  background-color: #657a8de3;
+  background: linear-gradient(45deg, #909aa2e3, #657a8de3);
 }
 .cube_face_left .window_wrap .w_front .w_frame1 {
   position: absolute;
