@@ -1,12 +1,13 @@
 import './Loading.css';
 const Loading = ({ onClick, addStyle }) => {
 
+    const rains = Array.from({ length: 50 }, (_, index) => 'rain');
     return (
         <div className="loading" >
             <div className='loading_wrap' style={addStyle ? { transform: 'translateZ(799px)' } : {}} >
                 <div className='front_wall'>
                     <div className='window'>
-                        <div className='city'>🏙️</div>
+                        <div className='city'>🌃</div>
                     </div>
                     <div className="exit_door" onClick={onClick} style={addStyle ? { transform: 'translate(-50%, 0) rotateY(-120deg)' } : {}}>
                         <div className="deco_wrap">
@@ -32,6 +33,9 @@ const Loading = ({ onClick, addStyle }) => {
                         <div className='road'></div>
                     </div>
                 </div>
+                {rains.map((rains, index) => (
+                    <div key={index} className={rains}></div>
+                ))}
             </div>
         </div>
     );

@@ -27,7 +27,7 @@
 }
 @keyframes rain {
   0% {
-    top: 0;
+    top: -50px;
     opacity: 0.5;
   }
   100% {
@@ -357,11 +357,11 @@
 }
 .cube_face_left .window_wrap .w_front .rain {
   position: absolute;
-  top: 0;
-  width: 2px;
-  height: 10px;
+  top: -50px;
+  width: 1px;
+  height: 8px;
   border-radius: 50%;
-  background-color: #65a3cd;
+  background-color: #3b6079;
 }
 .cube_face_left .window_wrap .w_front .rain1 {
   left: 30px;
