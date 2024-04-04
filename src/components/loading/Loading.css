@@ -361,11 +361,24 @@
   background-color: #404b55;
   transform: translateZ(-10px);
 }
-.loading .front_wall .window {
+.loading .front_wall .window1 {
   position: absolute;
   bottom: 150px;
   left: 50%;
   transform: translate(150px, 0);
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(to bottom, #3e4851 5px, transparent 1px),
+    linear-gradient(to right, #3e4851 5px, transparent 1px);
+  background-size: 73px 73px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: rgb(17, 25, 28);
+}
+.loading .front_wall .window2 {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-290px, 0);
   width: 150px;
   height: 150px;
   background-image: linear-gradient(to bottom, #3e4851 5px, transparent 1px),
@@ -379,7 +392,7 @@
   bottom: -11px;
   left: -20px;
   font-size: 141px;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 .loading .bottom_wall {
   position: absolute;

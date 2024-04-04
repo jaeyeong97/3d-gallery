@@ -8,7 +8,7 @@ function App() {
 
   const handleDoorClick = () => {
     setTimeout(() => {
-      setShowMain(true);
+      setShowMain(!showMain);
     }, 2000)
     setAddStyle(!addStyle);
   };

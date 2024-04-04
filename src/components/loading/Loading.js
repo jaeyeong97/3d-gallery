@@ -6,7 +6,10 @@ const Loading = ({ onClick, addStyle }) => {
         <div className="loading" >
             <div className='loading_wrap' style={addStyle ? { transform: 'translateZ(799px)' } : {}} >
                 <div className='front_wall'>
-                    <div className='window'>
+                    <div className='window1'>
+                        <div className='city'>🌃</div>
+                    </div>
+                    <div className='window2'>
                         <div className='city'>🌃</div>
                     </div>
                     <div className="exit_door" onClick={onClick} style={addStyle ? { transform: 'translate(-50%, 0) rotateY(-120deg)' } : {}}>
