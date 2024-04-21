@@ -11,13 +11,13 @@ const Gallery = () => {
   const Access_Key = "d57SqERduFLBmdqXYCfqj_ULjf3DZLdbKDeelDSLtsI";
   const url = `https://api.unsplash.com/search/photos?page=1&query=landscape&client_id=${Access_Key}&orientation=landscape&per_page=80`;
 
+  // 사진 api
   const fetchRequest = async () => {
     const response = await fetch(url);
     const responseJson = await response.json();
     const result = responseJson.results;
     setRes(result);
   };
-
   useEffect(() => {
     fetchRequest();
   }, []);

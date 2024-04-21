@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import Gallery from './components/Gallery';
 import Loading from './components/loading/Loading';
 function App() {
