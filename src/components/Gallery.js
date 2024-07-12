@@ -7,6 +7,7 @@ const Gallery = () => {
   const [res, setRes] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const Access_Key = "d57SqERduFLBmdqXYCfqj_ULjf3DZLdbKDeelDSLtsI";
   const url = `https://api.unsplash.com/search/photos?page=1&query=landscape&client_id=${Access_Key}&orientation=landscape&per_page=80`;
@@ -40,10 +41,28 @@ const Gallery = () => {
     setIsLoading(true);
   };
 
+  const handleMouseMove = (event) => {
+    const xPercent = (event.clientX / window.innerWidth) * 100 - 50;
+    const yPercent = (event.clientY / window.innerHeight) * 100 - 50;
+    setMousePosition({ x: -xPercent / 3, y: -yPercent / 3 });
+  };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const style = {
+    top: `${50 + mousePosition.y}%`,
+    left: `${50 + mousePosition.x}%`,
+  };
+
   return (
     <div className="gallery_wrap">
       {isLoading ? (window.location.reload()) : (
-        <div className="scene">
+        <div className="scene" style={style}>
           <div className={switchToggle ? 'cube' : 'cube off'}>
             <div className="cube_face cube_face_back">
               <div className="frame_wrap" >

@@ -56,8 +56,6 @@
 }
 .scene {
   position: fixed;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   width: 1000px;
   height: 500px;
@@ -303,7 +301,7 @@
   border-right: none;
   box-sizing: border-box;
   background-color: #353529;
-  animation: lighting 10s infinite;
+  animation: lighting 7s infinite;
 }
 .cube_face_left .window_wrap .w_front::after {
   content: "";
